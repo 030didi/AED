@@ -22,6 +22,7 @@ class AedListActivity : AppCompatActivity() {
 
         val aedList = listOf(
             AedLocation("維澈樓AED", "維澈樓 1 樓", 24.956828189067945, 121.24085895583634),
+
             AedLocation("教學大樓AED", "教學大樓 1 樓", 0.0, 0.0),
             AedLocation("良善宿舍AED", "良善宿舍 1 樓", 0.0, 0.0),
             AedLocation("篤信大樓AED", "篤信大樓 1 樓", 0.0, 0.0),
