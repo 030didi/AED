@@ -3,7 +3,9 @@ package com.example.aed
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -16,6 +18,16 @@ class AedDetailActivity : AppCompatActivity() {
         val tvDetail = findViewById<TextView>(R.id.tvDetail)
         val btnBack = findViewById<Button>(R.id.btn_back_detail)
         val btnOpenMap = findViewById<Button>(R.id.btn_open_map)
+        val imageAedDetail = findViewById<ImageView>(R.id.imageAedDetail)
+        val imageResId = intent.getIntExtra("imageResId",0)
+
+        if (imageResId != 0) {
+            imageAedDetail.setImageResource(imageResId)
+            imageAedDetail.visibility = View.VISIBLE
+        } else {
+            imageAedDetail.visibility = View.GONE
+        }
+
 
         // ⭐ 1. 接收傳來的資料
         val name = intent.getStringExtra("name")

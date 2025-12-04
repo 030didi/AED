@@ -42,10 +42,25 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/imageAedDetail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-    
+
+    <!-- AED 圖片 -->
+    <ImageView
+        android:id="@+id/imageAedDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="AED 圖片"
+        android:src="@drawable/aed1"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
     <Button
         android:id="@+id/btn_open_map"
         android:layout_width="wrap_content"

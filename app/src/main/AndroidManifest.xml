@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AED">
         <activity
+            android:name=".AedListActivity"/>
+
+        <activity
+            android:name=".AedDetailActivity"/>
+
+        <activity
             android:name=".AEDteach"
             android:exported="false" />
         <activity
