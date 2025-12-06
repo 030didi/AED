@@ -14,6 +14,15 @@ class AedDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aed_detail)
 
+        //選單放置處
+        val btn_location = findViewById<ImageView>(R.id.btn_location)
+        //phone
+        //setting
+        btn_location.setOnClickListener {
+            val intent = Intent(this, AedListActivity::class.java)
+            startActivity(intent)
+        }
+
         val tvTitle = findViewById<TextView>(R.id.tvTitle)
         val tvDetail = findViewById<TextView>(R.id.tvDetail)
         val btnBack = findViewById<Button>(R.id.btn_back_detail)

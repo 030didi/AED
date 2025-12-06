@@ -1,8 +1,10 @@
 package com.example.aed
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +16,15 @@ class AedListActivity : AppCompatActivity() {
 
         val btnBack = findViewById<Button>(R.id.btn_back)
         btnBack.setOnClickListener { finish() }
+
+       //選單放置處
+        val btn_location = findViewById<ImageView>(R.id.btn_location)
+        //phone
+        //setting
+        btn_location.setOnClickListener {
+            val intent = Intent(this, AedListActivity::class.java)
+            startActivity(intent)
+        }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)

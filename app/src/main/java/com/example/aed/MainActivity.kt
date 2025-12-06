@@ -3,6 +3,7 @@ package com.example.aed
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,10 +14,11 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        
+
         setContentView(R.layout.activity_main)
-        
+
         val btnStart = findViewById<Button>(R.id.btn_start)
+
         btnStart.setOnClickListener {
             val intent = Intent(this, AedListActivity::class.java)
             startActivity(intent)
@@ -27,6 +29,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //跳轉到問題
+        val btnQA = findViewById<Button>(R.id.btn_QA)
+        btnQA.setOnClickListener {
+            val intent = Intent(this, AEDFaq::class.java)
+            startActivity(intent)
+        }
+
 
 
         //跳轉到AEDCPR教學
