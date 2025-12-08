@@ -16,12 +16,21 @@ class AedDetailActivity : AppCompatActivity() {
 
         //選單放置處
         val btn_location = findViewById<ImageView>(R.id.btn_location)
-        //phone
-        //setting
         btn_location.setOnClickListener {
             val intent = Intent(this, AedListActivity::class.java)
             startActivity(intent)
         }
+        //電話icon預設119
+        val btnCall = findViewById<ImageView>(R.id.btn_call)
+        btnCall.setOnClickListener {
+            val phoneNumber = "119"  // 你想預先填的電話號碼
+            val intent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:$phoneNumber")
+            }
+            startActivity(intent)
+        }
+        //setting
+
 
         val tvTitle = findViewById<TextView>(R.id.tvTitle)
         val tvDetail = findViewById<TextView>(R.id.tvDetail)
@@ -60,5 +69,7 @@ class AedDetailActivity : AppCompatActivity() {
             intent.setPackage("com.google.android.apps.maps")
             startActivity(intent)
         }
+
+
     }
 }

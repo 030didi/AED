@@ -2,6 +2,7 @@ package com.example.aed
 
 import android.content.Intent
 import android.media.Image
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -17,14 +18,22 @@ class AedListActivity : AppCompatActivity() {
         val btnBack = findViewById<Button>(R.id.btn_back)
         btnBack.setOnClickListener { finish() }
 
-       //選單放置處
+        //選單放置處
         val btn_location = findViewById<ImageView>(R.id.btn_location)
-        //phone
-        //setting
         btn_location.setOnClickListener {
             val intent = Intent(this, AedListActivity::class.java)
             startActivity(intent)
         }
+        //電話icon預設119
+        val btnCall = findViewById<ImageView>(R.id.btn_call)
+        btnCall.setOnClickListener {
+            val phoneNumber = "119"  // 你想預先填的電話號碼
+            val intent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:$phoneNumber")
+            }
+            startActivity(intent)
+        }
+        //setting
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)

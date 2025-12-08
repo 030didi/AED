@@ -20,6 +20,9 @@
         <activity
             android:name=".AEDteach"
             android:exported="false" />
+
+        <activity android:name=".AEDFaq" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
