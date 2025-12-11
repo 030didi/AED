@@ -38,6 +38,14 @@ class AedListActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        // setting
+        val btnSetting = findViewById<ImageView>(R.id.btn_setting)
+        btnSetting.setOnClickListener {
+            val intent = Intent(this, RegulationActivity::class.java)
+            startActivity(intent)
+        }
+
+
         // ★ 你 17 個 AED 的完整列表 ★
 
         val aedList = listOf(

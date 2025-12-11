@@ -33,7 +33,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            android:src="@drawable/ic_setting" />
+            android:src="@drawable/ic_law" />
 
     </LinearLayout>
 </FrameLayout>

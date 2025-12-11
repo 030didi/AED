@@ -30,6 +30,11 @@ class AedDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
         //setting
+        val btnSetting = findViewById<ImageView>(R.id.btn_setting)
+        btnSetting.setOnClickListener {
+            val intent = Intent(this, RegulationActivity::class.java)
+            startActivity(intent)
+        }
 
 
         val tvTitle = findViewById<TextView>(R.id.tvTitle)

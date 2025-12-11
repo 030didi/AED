@@ -30,14 +30,14 @@ class AEDFaq : AppCompatActivity() {
             startActivity(intent)
         }
         //setting
-
+        val btnSetting = findViewById<ImageView>(R.id.btn_setting) // 或 Button，看你 layout
+        btnSetting.setOnClickListener {
+            val intent = Intent(this, RegulationActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnBack = findViewById<Button>(R.id.btn_back_faq)
         btnBack.setOnClickListener { finish() }
-
-
-
-
 
     }
 }

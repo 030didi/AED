@@ -1,3 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AED</string>
+
+    <!-- MainActivity -->
+    <string name="btn_start">開始</string>
+    <string name="btn_qa">常見問題</string>
+    <string name="btn_teach">AED/CPR 教學</string>
+    <string name="btn_settings">設定</string>
+
+    <!-- SettingActivity -->
+    <string name="setting_title">設定</string>
+    <string name="brightness">螢幕亮度</string>
+    <string name="font_size">字體大小</string>
+    <string name="language">語言</string>
+    <string name="btn_back">返回</string>
+    <string name="select_language">選擇語言</string>
+    <string name="chinese">中文</string>
+    <string name="english">English</string>
+    <string name="permission_required">請允許修改系統設定權限</string>
+
+    <!-- AED List -->
+    <string name="aed_list_title">AED 列表</string>
+    <string name="search_hint">搜尋地點</string>
+
+    <!-- 其他通用字串 -->
+    <string name="ok">確定</string>
+    <string name="cancel">取消</string>
 </resources>
